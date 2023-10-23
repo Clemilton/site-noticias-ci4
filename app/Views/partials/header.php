@@ -22,6 +22,14 @@
         </nav><!-- .navbar -->
 
         <div class="position-relative">
+            <?php if (session()->has('user')) : ?>
+                <span class="text">Olá, <?php echo session()->get('user')->firstName ?></span>
+                <a href="<?php echo url_to('login.destroy') ?>"><span class="text">| Logout</span></a>
+
+            <?php else : ?>
+                <span class="text">Visitante</span>
+                <a href="<?php echo url_to('login') ?>"><span class="text">| Login</span></a>
+            <?php endif; ?>
             <a href="#" class="mx-2"><span class="bi-facebook"></span></a>
             <a href="#" class="mx-2"><span class="bi-twitter"></span></a>
             <a href="#" class="mx-2"><span class="bi-instagram"></span></a>

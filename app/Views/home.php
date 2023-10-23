@@ -1,8 +1,5 @@
 <?= $this->extend('master') ?>
 
-<?= $this->section('css') ?>
-<link rel="stylesheet" href="<?php echo base_url('assets/css/fragment.css') ?>">
-<?= $this->endSection() ?>
 
 
 <?= $this->section('content') ?>
@@ -45,7 +42,6 @@
 
 <?= $this->section('js') ?>
 <script type="module">
-    import '/assets/js/build/fragment.js'
     import '/assets/js/loadHomeData.js'
 </script>
 <?= $this->endSection() ?>
